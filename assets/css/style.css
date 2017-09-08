@@ -1,0 +1,374 @@
+body{
+font-family: 'Raleway', sans-serif;
+letter-spacing: 2px;
+background-color:;
+
+}
+
+h1{
+font-size: 3em;
+margin-top: 0;
+margin-left: 22px;
+
+}
+
+.col-md-6 {
+/*border: 2px solid #eee;*/
+margin-top: 20px;
+
+}
+
+.col-md-8
+{
+
+}
+.col-md-4  {
+padding-right:55px;
+
+}
+.form-group
+{
+}
+
+.navbar-header {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    background: #000;
+    box-shadow: 0px 0px 8px #000000;
+    position: fixed;
+    margin:0 auto;
+
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right:25%;
+
+
+}
+
+.navbar-brand > img{
+	margin-left: 50%;
+	display: block;
+    margin: auto;
+
+}
+
+
+.wrapper{
+width: 100%;
+margin: 125px auto;
+
+}
+
+.form-container{
+margin: 20px auto;
+width: 90%;
+}
+
+.form-container-action{
+margin: 20px auto;
+width: 90%;
+}
+
+#submit{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: .7em;
+    padding: 8px;
+   
+}
+
+#submit:link {
+
+}
+
+#submit:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#submit:active {
+    background-color: #000000; 
+    color: white;
+}
+
+
+
+#buy{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: 1.2em;
+    padding: 5px 20px 5px 20px;
+
+   
+}
+
+#buy:link {
+
+}
+
+#buy:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#buy:active {
+    background-color: #000000; 
+    color: white;
+}
+
+#sell{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: 1.2em;
+     padding: 5px 20px 5px 20px;
+
+   
+}
+
+#sell:link {
+
+}
+
+#sell:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#sell:active {
+    background-color: #000000; 
+    color: white;
+}
+
+#reset:link {
+
+}
+
+#reset:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#reset:active {
+    background-color: #000000; 
+    color: white;
+}
+#reset
+{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: 1.2em;
+    padding: 5px 20px 5px 20px;
+    display:inline;
+
+   
+}
+
+#sell{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: 1.2em;
+     padding: 5px 20px 5px 20px;
+
+   
+}
+
+
+#currency-input{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: .7em;
+    padding: 8px;
+   
+}
+
+#currency-input:link {
+
+}
+
+#currency-input:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#currency-input:active {
+    background-color: #000000; 
+    color: white;
+}
+
+#convert{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-top: 5px;
+    font-size: .7em;
+    padding: 8px;
+   
+}
+
+#convert:link {
+
+}
+
+#convert:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#convert:active {
+    background-color: #000000; 
+    color: white;
+}
+
+
+
+input[type=text] {
+    width: 75%;
+    padding: 4px ;
+    margin: 5px 0;
+    border-bottom: 1px solid #000000;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    color: 	#808080;
+    font-size: 1em;
+
+    /*box-sizing: border-box;*/
+}
+
+
+
+label {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    color: #000000;
+
+}
+
+.ticker{
+
+    border: 1px solid #000;
+    color: #000;
+    width: 100%;
+    margin-top: 5px;
+    font-size: .7em;
+    padding: 8px;
+    float: left;
+    height: 200px;
+    text-align:center;
+
+}
+
+.chart1,.chart2 {
+	width: 90%;
+	margin: 0px auto 0;
+	margin-bottom: 50px;
+	/*height: 300px;*/
+    /*box-shadow: 0px 0px 8px #000000;*/
+    border: 1px solid #fff;
+
+
+}
+
+.btn-align{
+	margin-top: 10px;
+}
+
+.btn2-align{
+    margin-top: 50px;
+
+}
+
+#currency-tag1
+{
+    font-size: 2.5em
+
+}
+#currency-tag2
+{
+    font-size: 1.5em
+
+}
+#currency-tag3
+{
+    font-size: 1em
+    color:#666666;
+    opacity: .7;
+}
+
+.form-answer-container
+{
+    border: 1px solid #000;
+    color: #000;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 1.2em;
+    padding: 16px;
+    float: left;
+    text-align:center;
+    vertical-align:center;
+}
+
+.percent-change-container
+{
+    border: 1px solid #000;
+    color: #000;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 1em;
+    padding: 16px;
+    float: left;
+    text-align:center;
+    vertical-align:center;  
+}
+
+table
+{
+    color: #000;
+    width: 100%;
+    padding: 16px;
+    text-align:center;
+    vertical-align:center; 
+}
+
+td
+{
+    font-size: .8em;
+    padding-top: 1em;
+    vertical-align: center;
+    text-align: center;
+
+}
+th
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+#tablerow
+{
+    margin: 10px auto;
+}
+
+#percent-change-table
+{
+    vertical-align: center;
+}

@@ -1,0 +1,169 @@
+psuedocode notes
+
+Ahmer:
+-implement presence so the application can track when a specific user ran the program last, and compare the last
+recorded bitcoin value (in firebase) with the current value that is being pulled from the API. based on that, it'll make a recommendation to the user to either buy or sell
+-make a timer function that calls the AJAX request every 6 seconds. 
+-have the user input the symbol of the cryptocurrency they want to track
+
+
+
+//Formula LOGIC
+
+	// var pChangeAll = firebase from negativeInfinity until now
+	// function (newTrack) = %change from buy alert confirmed until now
+	// 	(still figuring it out)
+	var userInputPercentChangeBuy= $("#")
+	var userInputTimeSpanBuy = $("#")
+
+	var userInputPercentChangeSell = $("#")
+	var userInputTimeSpanSell = $("#")
+
+	var userPercentChangeTotal = buy.value/sell.value
+
+
+if (CCval increases by userInputPercentChangeBuy over userInputTimeSpanBuy seconds or less) {
+	function buyNow () {
+		var txt;
+		var buy = confirm("You should buy into " + CCname + " now.")
+			if (buy == true) {
+				//Create new firebase named CCname
+				//Start logging to new Array in firebase.CCname
+				document.getElementById(whateveryouwanttocallit).innerHTML = 
+				"updating the percentage change from *buy second to current";
+					if (CCval increases or keeps above userInputPercentChangeSell over userInputTimeSpanSell seconds or less) {
+						document.getElementById(whateveryouwanttocallit).innerHTML = "Hold";
+					} else {
+						var sell = confirm("You should sell " + CCname + " now.");
+							if (sell == true) {
+								//stop logging to firebase.CCname
+								//delete firebase.CCname
+								//alert or write in html:
+								//		("You increased your holdings by " + userPercentChangeTotal + "%.")
+							};
+					};
+			};
+	};
+};
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/reset.css">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+	<form role="form">
+      <div class="form-group">
+        <label for="user-input">Enter in the name of any Alt Coin</label>
+        <input type="text" class="form-control" id="user-input">
+      </div>
+      <button type="submit" class="btn btn-default" id="submit">Search</button>
+    </form>
+    	<br>
+    <form role="form">
+      <div class="form-group">
+        <label for="currency-type">Enter currency type (USD, EUR, JPY, etc): </label>
+        <input type="text" class="form-control" id="currency-type">
+        <label for="user-input">Enter numerical amount: </label>
+        <input type="text" class="form-control" id="amount">
+      </div>
+      <button type="submit" class="btn btn-default" id="convert">Convert</button>
+    </form>
+    	<br>
+
+    
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script src="assets/javascript/java.js"></script>
+
+</body>
+</html>
+
+userinputpercent = 10;
+
+if(actualpercentagechange == userinputpercent)
+{
+	action button turns red
+	if(onclick of action button)
+	{
+
+	}
+}
+else
+{
+	hold
+}
+
+function hide()
+{
+
+	$('#sell-box').hide();
+	$('#buy-box').hide();
+}
+
+function showBuy()
+{
+	
+	$('#buy-box').show();
+	$('#purchase-box').hide()
+	// $('#sell-input').show()
+	// $('#sell-input2').show()
+}
+function showSell()
+{
+	// $('#buy-input').show()
+	// $('#buy-input2').show()
+	$('#sell-box').show();
+	$('#purchase-box').hide()
+}
+$('#convert').on("click",function(event){
+		ajaxCall2()
+		event.preventDefault();
+		currencyType = $('#currency-input').val();
+		console.log(currency)
+		currencyType = currencyType.toUpperCase();
+		amount = $('#amount-input').val();
+		query3URL = "https://blockchain.info/tobtc?currency=" + currencyType + "&value=" + amount;
+		ajaxCall3();
+
+});	
+hide()
+$('#action').on("click",function(event){
+	event.preventDefault()
+showBuy()
+})
+$('#action2').on("click",function(event){
+	event.preventDefault()
+showSell()
+})
+$('#action3').on("click",function(event){
+	event.preventDefault()
+
+});
+
+
+		convertedToBTC = response;
+		$('.form-answer-container').html(currency+amount+" = "+convertedToBTC + " BTC");
+		 });
+
+
+		  $('#ticker1').html("<div id='currency-tag1'>"+currencyType+"</div>" +"<br>"  + "<div id='currency-tag2'>" + currency + tickerInfo + "</div><br>"  + "<div id='currency-tag3'> Bitcoin value </div>");
+		 $('#ticker2').html("<br>" + "<div id='currency-tag2'>" + currency + sellPrice +"</div> <br>"  + "<div id='currency-tag3'>Last sell price</div>");
+		 $('#ticker3').html("<br>"+ "<div id='currency-tag2'>" + currency + buyPrice + "</div> <br>"  + "<div id='currency-tag3'>Last buy price</div>");

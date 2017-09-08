@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CryptoTracker</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <img alt="Brand" src="assets/images/cc_tracker.png" style="width:30%">
+      </a>
+    </div>
+</nav>
+</div>
+
+
+<div class="container">
+
+
+<div class="row">
+
+<div class="col-md-8">
+
+
+<div class="form-container">
+
+
+	<form role="form">
+      <div class="form-group">
+        
+
+    
+        <div class="btn-align">
+            <label for="user-input">AltCoin</label>
+       
+        <input type="text" class="form-control" id="user-input" placeholder="name of any alt coin">
+
+        <button type="submit" class="btn btn-default" id="submit">SEARCH</button>
+    
+        </div>
+            
+ 
+
+        <div class="btn2-align">
+         <label for="user-input">Convert to Bitcoin</label>
+    <br>
+        <select class="selectpicker" id="currency-input">
+          <option selected>SELECT CURRENCY</option>
+          <option value="USD">USD</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+          <option value="SGD">SGD</option>
+          <option value="HKD">HKD</option>
+          <option value="CAD">CAD</option>
+          <option value="NZD">NZD</option>
+          <option value="AUD">AUD</option>
+          <option value="CLP">CLP</option>
+          <option value="DKK">DKK</option>
+          <option value="SEK">SEK</option>
+          <option value="ISK">ISK</option>
+          <option value="CHF">CHF</option>
+          <option value="BRL">BRL</option>
+          <option value="EUR">EUR</option>
+          <option value="RUB">RUB</option>
+          <option value="PLN">PLN</option>
+          <option value="THB">THB</option>
+          <option value="KRW">KRW</option>
+          <option value="TWD">TWD</option>
+        </select>
+
+    <br>
+    <br>
+               <label for="user-input"></label>
+        <input type="text" class="form-control" id="amount-input" placeholder="amount">
+        <button type="submit" class="btn btn-default" id="convert">CONVERT</button>
+
+        </div>
+    </form>
+
+      </div>
+
+
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+
+<div class="ticker">
+    <div id="ticker1"></div>
+    <div id="ticker2"></div>
+    <div id="ticker3"></div>
+</div>
+<div class="form-answer-container">Currency = BTC</div>
+<div class="percent-change-container"> 
+<table id ="percent-change-table">
+<tr> <th>7 Day</th>  <th>24hr</th>  <th> 1hr </th> </tr> 
+
+
+<tr id="tablerow"> <td id="day7"></td> <td id="hr24"></td> <td id="hr1"></td> </tr>
+<!-- <div class="row">
+<div class="col-md-4">7 day</div> <div class="col-md-4"> 24 hr</div><div class="col-md-4">1hr</div>  
+</div> -->
+</table>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="form-container-action">
+  <form role="form">
+  
+      <div class="form-inline">
+        
+ <!--        <div id="purchase-box">
+        <button type="submit" class="btn btn-default" id="action">Buy</button>
+        <button type="submit" class="btn btn-default" id="action2">Sell</button>
+        </div> -->
+      <div class="row">
+        <div class="col-md-6">
+        <div id="buy-box">
+        <button type="submit" class="btn btn-default" id="buy">Buy</button>
+        <label for="user-input" id="buy-input2"></label>
+        <input type="text" class="form-control" id="buy-input" placeholder="set percentage">
+      
+       </div> 
+
+         
+     
+        <div id="sell-box">
+        <button type="submit" class="btn btn-default" id="sell">Sell</button>
+        <label for="user-input" id="sell-input2"> </label>
+        <input type="text" class="form-control" id="sell-input" placeholder="set percentage">
+        </div>
+        </div>
+        <div class="col-md-6">
+        <button class="btn btn-default" id="reset">Click to Reset</button>
+        </div>
+      </div>
+
+
+
+
+      </div>
+    </form>
+    </div>
+</div>
+
+
+
+
+ <div class="row">
+<div class="col-md-12">
+<div class="chart1">
+<div id="percent-change"></div>
+        <br>
+
+  <div id="chartContainer" style="height: 300px; width:100%;">
+  </div>
+        <div id="percent-change-new"></div>
+  <div id="chartContainerNew" style="height: 300px; width:100%;">
+  </div>
+
+</div>
+
+</div>
+</div>
+
+</div> 
+
+
+
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script src="assets/javascript/java.js"></script>
+
+</body>
+</html>
+<script>
+/*
+// Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 30, left: 50},
+    width = 600 - margin.left - margin.right,
+    height = 270 - margin.top - margin.bottom;
+
+  
+
+// Parse the date / time
+var parseDate = d3.time.format("%d-%b-%y").parse;
+
+// Set the ranges
+var x = d3.time.scale().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+// Define the line
+var valueline = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+    
+// Adds the svg canvas
+var svg = d3.select(".jumbotron")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");*/
+
+
+
+              </script>
